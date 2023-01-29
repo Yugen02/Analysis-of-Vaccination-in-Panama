@@ -30,7 +30,7 @@ identifier.set_languages(['es','en'])
 
 #Ground Truth
 
-excel = pd.ExcelFile(r'C:\Users\efrai\OneDrive - Universidad Tecnológica de Panamá\Universidad\Proyecto de la GITTS\Verano\PC\XGBoost\CompleteManualReview_1.xlsx')
+excel = pd.ExcelFile(r'csv')
 
 neg = pd.read_excel(excel, 'Negatives')
 pos = pd.read_excel(excel, 'Positives')
@@ -168,7 +168,7 @@ class XGBPred:
 
        model = xgb.XGBRegressor(tree_method="gpu_hist",gpu_id=0,colsample_bytree=0.7, learning_rate=0.03, n_estimators=500, max_depth=200,
                                 subsample=0.9, objective='binary:logistic', eval_metric=['auc', 'rmse', 'map'])
-       model.load_model(r"C:\Users\efrai\OneDrive - Universidad Tecnológica de Panamá\Universidad\Proyecto de la GITTS\Verano\PC\XGBoost\XGB_OMICRON_V2.model")
+       model.load_model(r'csv')
        
        self.predictions = model.predict(self.vectorized_X)
        print('Predictions: ' + str(self.predictions))
@@ -203,7 +203,7 @@ class XGBPred:
       #  self.estweets.to_csv(f'C:/Users/efrai/OneDrive - Universidad Tecnológica de Panamá/Universidad/Proyecto de la GITTS/Vacunas/Data/Parced/Predicciones_vacunas.csv',columns=['Filtered', 'words'])
 
 
-pred20 = XGBPred(r'C:\Users\efrai\OneDrive - Universidad Tecnológica de Panamá\Universidad\Proyecto de la GITTS\Vacunas\Data\Parced\P_Pfizer\Datos_Final\1ra_Mitad_final.csv')
+pred20 = XGBPred(r'csv')
 
 
 # print('Sentiment difference, negativity rate and positivity rate:', pred20.sentiment_difference, pred20.negativityrate, pred20.positivityrate)

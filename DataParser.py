@@ -26,7 +26,7 @@ deprwo = set(words)
 
 # df1 = pd.read_csv(r'C:\Users\Efrain\OneDrive - Universidad Tecnológica de Panamá\Universidad\Proyecto de la GITTS\Vacunas\Data\Datos_2020\All2020_Cont.csv', names=['id', 'text', 'hashtags',
 #                     'created_at', 'geo', 'like_count', 'quote_count', 'reply_count', 'retweet_count'], header=None)
-df = pd.read_csv(r'C:\Users\efrain\OneDrive - Universidad Tecnológica de Panamá\Universidad\Proyecto de la GITTS\Vacunas\Data\Datos_2020\All2020_Cont.csv', names=['id', 'text', 'hashtags',
+df = pd.read_csv(r'csv', names=['id', 'text', 'hashtags',
                     'created_at', 'geo', 'like_count', 'quote_count', 'reply_count', 'retweet_count'], header=None)
 # df = df[:1054]
 # df = pd.concat([df1,df2])
@@ -127,7 +127,7 @@ df['time'] = formatted
 print(df['time'])
 df['length'] = lengthvec
 df['words'] = depwordcount
-df.to_csv(r'C:\Users\efrain\OneDrive - Universidad Tecnológica de Panamá\Universidad\Proyecto de la GITTS\Vacunas\Data\Para_Comparar_con_RE.csv',columns=['text', 'words','time'])
+df.to_csv(r'csv',columns=['text', 'words','time'])
 
 # df['dayofyear'] = df['time'].dt.dayofyear
 
@@ -163,7 +163,7 @@ while weekno<54 :
         print(weekno)
         weeklist = df['weekdate'].str.contains(f'2020-0{weekno}')
         weekdf = df[weeklist]
-        weekdf.to_csv("C:/Users/Efrain/OneDrive - Universidad Tecnológica de Panamá/Universidad/Proyecto de la GITTS/Vacunas/Data/Semana/0{weekno}-2021.csv")
+        weekdf.to_csv(r'csv')
         # weekdf.to_csv(f"D:/GITTS/Data/Costa Rica/Weekly/2019/0{weekno}-2019.csv", mode='a', header=True) #if it's a second run
         print(np.shape(weekdf), weekdf.head())
         weekno += 1
@@ -174,7 +174,7 @@ while weekno<54 :
         print(weekno)
         weeklist = df['weekdate'].str.contains(f'2020-{weekno}')
         weekdf = df[weeklist]
-        weekdf.to_csv("C:/Users/Efrain/OneDrive - Universidad Tecnológica de Panamá/Universidad/Proyecto de la GITTS/Vacunas/Data/Semana/{weekno}-2021.csv")
+        weekdf.to_csv(r'csv')
         # weekdf.to_csv(f"D:/GITTS/Data/Costa Rica/Weekly/2019/{weekno}-2019.csv", mode='a', header=False) #if it's a second run
         print(np.shape(weekdf), weekdf.head())
         weekno += 1

@@ -28,9 +28,9 @@ weeks0 = np.arange(1,54)
 for i in weeks0:
     a = df.loc[df['dayofweek'] == i]
     if i < 10:  
-        a.to_csv(f'C:/Users/efrain/OneDrive - Universidad Tecnológica de Panamá/Universidad/Proyecto de la GITTS/Vacunas/Data/Semana/Vacunas_21/0{i}-2021.csv',columns=['text','time','dayofyear','dayofweek'])
+        a.to_csv(f'csv',columns=['text','time','dayofyear','dayofweek'])
     else:           
-        a.to_csv(f'C:/Users/efrain/OneDrive - Universidad Tecnológica de Panamá/Universidad/Proyecto de la GITTS/Vacunas/Data/Semana/Vacunas_21/{i}-2021.csv',columns=['text','time','dayofyear','dayofweek'])
+        a.to_csv(f'csv',columns=['text','time','dayofyear','dayofweek'])
 # df.to_csv('Pfizer_dayofyear.xlsx', columns=['text', 'words','time','dayofyear','dayofweek'])
 print('GUARDADO!')
 

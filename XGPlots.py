@@ -48,7 +48,7 @@ startTime = time.time()
 
 #Running it for 2020
 sentdif20, negrate20, posrate20, notweets20, usatweets20, norttweets20 = [], [], [], [], [], []
-pathlist20 = Path(r'C:\Users\efrai\OneDrive - Universidad Tecnológica de Panamá\Universidad\Proyecto de la GITTS\Vacunas\Data\Semana\Pfizer_2021_Prueba').glob('*.csv')
+pathlist20 = Path(r'csv').glob('*.csv')
 
 for path in pathlist20:
     print(str(path))
