@@ -13,3 +13,5 @@
 ![a](https://github.com/Yugen02/Analysis-of-Vaccination-in-Panama/blob/image/WC_VG_NEG.png)
 
 ![a](https://github.com/Yugen02/Analysis-of-Vaccination-in-Panama/blob/image/Bigram_VG_21.png)
+
+![a](https://imgur.com/gallery/FU4PzSR)
